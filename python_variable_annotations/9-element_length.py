@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Contains typed function element_length"""
-from typing import Iterable, Tuple, List
+"""Write a type-annotated function element_length."""
+
+from typing import List, Tuple, Sequence, Iterable
 
 
-def element_length(lst: Iterable[str]) -> List[Tuple[str, int]]:
-    """Returns list of tuples containing string and its length"""
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    """Return a list of tuples of the form (element, length)."""
     return [(i, len(i)) for i in lst]
